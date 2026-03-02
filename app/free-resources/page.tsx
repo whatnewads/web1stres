@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BookOpen, FileText, HardHat, ArrowRight } from "lucide-react";
+import { BookOpen, FileText, HardHat, ArrowRight, Download } from "lucide-react";
 import JsonLd from "@/components/json-ld";
 import { freeResourcesSchema } from "@/lib/schema/free-resources";
 
@@ -41,6 +41,24 @@ export default function FreeResourcesPage() {
               </span>
             </Link>
           ))}
+        </div>
+
+        {/* Bonus direct download */}
+        <div className="mt-10 bg-[#0A1628] rounded-xl p-6 lg:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div>
+            <p className="text-[#E8621A] mb-1" style={{ fontSize: "13px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "1px" }}>Bonus Resource</p>
+            <h3 className="text-white mb-1" style={{ fontSize: "20px", fontWeight: 700 }}>OSHA Recordkeeping Forms Package</h3>
+            <p className="text-gray-400" style={{ fontSize: "14px" }}>OSHA 300, 300A, and 301 forms — ready to print and use on your jobsite.</p>
+          </div>
+          <a
+            href="/assets/OSHA-RK-Forms-Package.pdf"
+            download
+            className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-[#E8621A] text-white rounded-lg hover:bg-[#d4571a] transition-colors"
+            style={{ fontSize: "15px", fontWeight: 600 }}
+          >
+            <Download className="w-4 h-4" />
+            Download Free
+          </a>
         </div>
       </div>
     </>

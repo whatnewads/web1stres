@@ -8,6 +8,7 @@ interface ResourceLeadCaptureClientProps {
   description: string;
   topics: string[];
   buttonLabel?: string;
+  downloadUrl?: string;
 }
 
 export function ResourceLeadCaptureClient({
@@ -15,27 +16,31 @@ export function ResourceLeadCaptureClient({
   description,
   topics,
   buttonLabel = "Download Free Guide",
+  downloadUrl,
 }: ResourceLeadCaptureClientProps) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
+
     const honeypot = (form.elements.namedItem("_gotcha") as HTMLInputElement)?.value;
     if (honeypot) return;
 
     setStatus("submitting");
-    const data = Object.fromEntries(new FormData(form));
+    const data = {
+      ...Object.fromEntries(new FormData(form)),
+      resourceTitle: title,
+    };
 
     try {
-      const csrfRes = await fetch("/api/contact");
-      const { csrfToken } = await csrfRes.json();
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://formspree.io/f/xwvnjedw", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, _csrf: csrfToken, resourceTitle: title }),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(data),
       });
-      if (res.ok) {
+      const json = await res.json();
+      if (json.ok) {
         setStatus("success");
         form.reset();
       } else {
@@ -91,9 +96,26 @@ export function ResourceLeadCaptureClient({
               <h2 className="text-[#0A1628] mb-2" style={{ fontSize: "22px", fontWeight: 700 }}>
                 You&apos;re All Set!
               </h2>
-              <p className="text-[#5A6178]" style={{ fontSize: "15px", lineHeight: 1.6 }}>
-                Check your inbox — we&apos;ll send the guide within 1 business day.
-              </p>
+              {downloadUrl ? (
+                <>
+                  <p className="text-[#5A6178] mb-6" style={{ fontSize: "15px", lineHeight: 1.6 }}>
+                    Your download is ready. Click below to get your free copy.
+                  </p>
+                  <a
+                    href={downloadUrl}
+                    download
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#E8621A] text-white rounded-lg hover:bg-[#d4571a] transition-colors"
+                    style={{ fontSize: "15px", fontWeight: 600 }}
+                  >
+                    <Download className="w-4 h-4" />
+                    Download Now
+                  </a>
+                </>
+              ) : (
+                <p className="text-[#5A6178]" style={{ fontSize: "15px", lineHeight: 1.6 }}>
+                  Check your inbox — we&apos;ll send the resource within 1 business day.
+                </p>
+              )}
             </div>
           ) : (
             <>
@@ -101,7 +123,9 @@ export function ResourceLeadCaptureClient({
                 Get Your Free Copy
               </h2>
               <p className="text-[#5A6178] mb-6" style={{ fontSize: "14px" }}>
-                Enter your work email and we&apos;ll send it straight to your inbox.
+                {downloadUrl
+                  ? "Enter your details and download instantly."
+                  : "Enter your work email and we\u2019ll send it straight to your inbox."}
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">

@@ -25,6 +25,7 @@ export default function OshaComplianceGuidePage() {
           "Common citation categories and how to avoid them",
         ]}
         buttonLabel="Download Free OSHA Guide"
+        downloadUrl="/assets/osha-compliance-guide.pdf"
       />
     </>
   );

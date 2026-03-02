@@ -25,6 +25,7 @@ export default function InjuryPreventionGuidePage() {
           "Leading vs. lagging indicator tracking",
         ]}
         buttonLabel="Download Free Injury Prevention Guide"
+        downloadUrl="/assets/preventative-safety.pdf"
       />
     </>
   );
