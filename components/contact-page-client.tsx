@@ -11,6 +11,8 @@ export function ContactPageClient() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
+
+    // Honeypot check
     const honeypot = (form.elements.namedItem("_gotcha") as HTMLInputElement)?.value;
     if (honeypot) return;
 
@@ -18,14 +20,13 @@ export function ContactPageClient() {
     const data = Object.fromEntries(new FormData(form));
 
     try {
-      const csrfRes = await fetch("/api/contact");
-      const { csrfToken } = await csrfRes.json();
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://formspree.io/f/xwvnjedw", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, _csrf: csrfToken }),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(data),
       });
-      if (res.ok) {
+      const json = await res.json();
+      if (json.ok) {
         setStatus("success");
         form.reset();
       } else {

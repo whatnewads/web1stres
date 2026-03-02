@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
@@ -21,35 +21,26 @@ const employeeOptions = ["1–10", "11–50", "51–200", "201–500", "500+"];
 
 export function ScheduleConsultForm() {
   const router = useRouter();
-  const [csrfToken, setCsrfToken] = useState("");
   const [status, setStatus] = useState<"idle" | "submitting" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
-  useEffect(() => {
-    fetch("/api/contact")
-      .then((r) => r.json())
-      .then((d) => setCsrfToken(d.csrfToken ?? ""))
-      .catch(() => {});
-  }, []);
-
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
+
+    // Honeypot check
+    const honeypot = (form.elements.namedItem("_gotcha") as HTMLInputElement)?.value;
+    if (honeypot) return;
+
     setStatus("submitting");
     setErrorMsg("");
 
-    const form = e.currentTarget;
-    const data: Record<string, string> = {};
-    const fields = ["_gotcha", "_csrf", "name", "company", "email", "phone", "industry", "employees", "message", "consent"];
-    fields.forEach((f) => {
-      const el = form.elements.namedItem(f) as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement | null;
-      if (el) data[f] = el.type === "checkbox" ? ((el as HTMLInputElement).checked ? "on" : "") : el.value;
-    });
-    data["_csrf"] = csrfToken;
+    const data = Object.fromEntries(new FormData(form));
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://formspree.io/f/mzdaqpqd", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(data),
       });
       const json = await res.json();
@@ -86,7 +77,6 @@ export function ScheduleConsultForm() {
           <div className="hidden" aria-hidden="true">
             <input name="_gotcha" tabIndex={-1} autoComplete="off" />
           </div>
-          <input type="hidden" name="_csrf" value={csrfToken} />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
