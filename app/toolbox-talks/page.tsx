@@ -27,6 +27,7 @@ export default function ToolboxTalksPage() {
           "Electrical safety basics",
         ]}
         buttonLabel="Download Free Toolbox Talks"
+        downloadUrl="/assets/OSHA_Toolbox_Talks_52_Weeks.csv"
       />
     </>
   );
