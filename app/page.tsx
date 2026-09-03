@@ -40,6 +40,29 @@ const services = [
   { icon: FileHeart, title: "Medical Referrals", description: "Coordinated specialist referrals to keep your employees healthy and working.", href: "/referrals" },
 ];
 
+const buyerGroups = [
+  {
+    title: "Fire Departments & EMS Agencies",
+    body: "First-responder crews carry the same injury exposure they respond to. We provide onsite injury care, occupational physician access through telemedicine, and wellness and readiness support scheduled around shift rotations. When a member is injured on a call, our emergency response and case management teams document the injury and coordinate return-to-duty with your command staff.",
+  },
+  {
+    title: "Municipal HR & Risk Managers",
+    body: "Every workplace injury becomes a documentation trail. We handle injury reporting, workers' compensation coordination, and specialist referrals, and we keep the paperwork consistent from first report through case closure. Our case managers build return-to-work programs your departments can administer without adding headcount.",
+  },
+  {
+    title: "Industrial Contractors",
+    body: "We station credentialed medics on your site so injuries are treated where they happen rather than at a clinic across town. That covers onsite medical care, drug and alcohol testing, and emergency response, with the medic credential level matched to your site's risk profile. Crews stay on the job and your schedule absorbs less disruption.",
+  },
+  {
+    title: "Construction & Energy Companies",
+    body: "From solar and wind installations to heavy civil work, we cover the worksite for the length of the project. Onsite providers treat injuries quickly, drug and alcohol testing runs on your schedule, and our case managers carry each injury through to return to work. Documentation is handed back in a form your compliance team can file.",
+  },
+  {
+    title: "Prime Contractors",
+    body: "We coordinate occupational health coverage across your portfolio of sites and subcontractors so crew readiness is verified the same way everywhere. Reporting is standardized across engagements, insurance and credentialing documentation is maintained per site, and our completed projects are available as past performance references.",
+  },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -125,6 +148,29 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service) => (
               <ServiceCard key={service.href} {...service} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHO WE SERVE */}
+      <section id="who-we-serve" className="py-16 lg:py-20 bg-[#F5F6F8]">
+        <div className="max-w-[1200px] mx-auto px-4 lg:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-[#0A1628] mb-4 font-bold text-[clamp(28px,4vw,40px)]">
+              Who We Serve
+            </h2>
+            <p className="text-[#5A6178] max-w-2xl mx-auto text-[16px] leading-[1.6]">
+              Different crews carry different risks. Here is how our onsite medics, telemedicine,
+              testing, training, and case management fit each of them.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {buyerGroups.map((group) => (
+              <div key={group.title}>
+                <h3 className="text-[#0A1628] mb-2 font-bold text-[18px]">{group.title}</h3>
+                <p className="text-[#5A6178] text-[15px] leading-[1.7]">{group.body}</p>
+              </div>
             ))}
           </div>
         </div>
