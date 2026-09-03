@@ -3,15 +3,20 @@
 import Image from "next/image";
 
 const partners = [
-  { name: "Mortenson", src: "/assets/mortensonlogo.webp" },
-  { name: "MYR Group", src: "/assets/myrgroup.webp" },
-  { name: "SOLV", src: "/assets/solvlogo.webp" },
-  { name: "Coming Soon", src: "/assets/comingsoon.webp" },
-  { name: "Coming Soon", src: "/assets/comingsoon.webp" },
-  { name: "Coming Soon", src: "/assets/comingsoon.webp" },
+  { name: "Mortenson", alt: "Mortenson", src: "/assets/mortensonlogo.webp" },
+  { name: "Strata", alt: "Strata logo", src: "/assets/stratalogo.webp" },
+  { name: "MYR Group", alt: "MYR Group", src: "/assets/myrgroup.webp" },
+  { name: "SOLV", alt: "SOLV", src: "/assets/solvlogo.webp" },
+  { name: "Coming Soon", alt: "Coming Soon", src: "/assets/comingsoon.webp" },
+  { name: "Coming Soon", alt: "Coming Soon", src: "/assets/comingsoon.webp" },
+  { name: "Coming Soon", alt: "Coming Soon", src: "/assets/comingsoon.webp" },
 ];
 
-function PartnerLogo({ name, src }: { name: string; src: string }) {
+// Static, non-rotating list so the names are readable without waiting on the
+// carousel animation, and are indexable / available to screen readers.
+const partnerNames = ["Mortenson", "Strata", "MYR", "SOLV"];
+
+function PartnerLogo({ name, alt, src }: { name: string; alt: string; src: string }) {
   const isPlaceholder = name === "Coming Soon";
   return (
     <div
@@ -21,8 +26,9 @@ function PartnerLogo({ name, src }: { name: string; src: string }) {
       <div className="relative h-[60px] w-[160px]">
         <Image
           src={src}
-          alt={name}
+          alt={alt}
           fill
+          loading="lazy"
           className="object-contain"
           sizes="160px"
           style={{ opacity: isPlaceholder ? 0.4 : 1 }}
@@ -63,7 +69,7 @@ export function PartnerCarousel() {
           className="text-[#1A1A2E] mb-3"
           style={{ fontSize: "clamp(24px, 3.5vw, 40px)", fontWeight: 700 }}
         >
-          Trusted by Leading Industrial Contractors
+          Trusted Partners
         </h2>
         <p
           className="text-[#666] mx-auto"
@@ -98,10 +104,23 @@ export function PartnerCarousel() {
                 transition: "all 0.3s ease",
               }}
             >
-              <PartnerLogo name={p.name} src={p.src} />
+              <PartnerLogo name={p.name} alt={p.alt} src={p.src} />
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="relative max-w-[1200px] mx-auto px-4 lg:px-6">
+        <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2">
+          {partnerNames.map((partnerName) => (
+            <li
+              key={partnerName}
+              className="text-accent font-semibold tracking-wide text-[clamp(16px,2vw,20px)]"
+            >
+              {partnerName}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
