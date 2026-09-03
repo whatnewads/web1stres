@@ -42,14 +42,6 @@ const services = [
 
 const buyerGroups = [
   {
-    title: "Fire Departments & EMS Agencies",
-    body: "First-responder crews carry the same injury exposure they respond to. We provide onsite injury care, occupational physician access through telemedicine, and wellness and readiness support scheduled around shift rotations. When a member is injured on a call, our emergency response and case management teams document the injury and coordinate return-to-duty with your command staff.",
-  },
-  {
-    title: "Municipal HR & Risk Managers",
-    body: "Every workplace injury becomes a documentation trail. We handle injury reporting, workers' compensation coordination, and specialist referrals, and we keep the paperwork consistent from first report through case closure. Our case managers build return-to-work programs your departments can administer without adding headcount.",
-  },
-  {
     title: "Industrial Contractors",
     body: "We station credentialed medics on your site so injuries are treated where they happen rather than at a clinic across town. That covers onsite medical care, drug and alcohol testing, and emergency response, with the medic credential level matched to your site's risk profile. Crews stay on the job and your schedule absorbs less disruption.",
   },
