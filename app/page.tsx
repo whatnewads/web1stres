@@ -185,9 +185,8 @@ export default function HomePage() {
           <h2 className="text-[#0A1628] text-center mb-12" style={{ fontSize: "clamp(28px, 4vw, 36px)", fontWeight: 700 }}>
             Real Results for Real Companies
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <CaseStudyCard title="Hill 1 & Hill 2" industry="Solar Construction" stat="800+ days zero incidents" href="/hill" />
-            <CaseStudyCard title="Fighting Jays" industry="Solar Construction" stat="500+ days worked safe" href="/fighting-jays" />
+          <div className="max-w-md mx-auto">
+            <CaseStudyCard title="Fighting Jays" industry="Solar Construction" stat="256% return on investment" href="/fighting-jays" />
           </div>
           <div className="text-center mt-8">
             <Link href="/cases" className="inline-flex items-center gap-2 text-[#E8621A] hover:gap-3 transition-all" style={{ fontSize: "15px", fontWeight: 600 }}>

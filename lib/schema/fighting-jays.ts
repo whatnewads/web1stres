@@ -7,12 +7,14 @@ export const fightingJaysSchema = {
     {
       "@type": "Article",
       "articleSection": "Case Study",
-      "headline": "Fighting Jays: Zero Incidents Over 500+ Days Worked Safe",
-      "description": "1st Response placed dedicated onsite EMTs and paramedics for an 18-month solar construction project, achieving zero incidents over 500+ days worked safe.",
-      "author": org,
+      "headline": "Fighting Jays: a 256% Return on Onsite Care",
+      "description":
+        "Mortenson spent approximately $100,000 on 1st Response onsite care at the Fighting Jays solar construction project and avoided an estimated $355,500 in offsite medical visits, an estimated 256% return on investment, with 237 of 245 first-aid encounters resolved on site.",
+      "image": `${base}/assets/fighting_jays.webp`,
+      "author": { "@type": "Person", "name": "Wesley Yielding" },
       "publisher": org,
-      "datePublished": "2025-01-15",
-      "dateModified": "2026-01-15",
+      "datePublished": "2026-10-02",
+      "dateModified": "2026-10-03",
       "mainEntityOfPage": { "@type": "WebPage", "@id": `${base}/fighting-jays` },
     },
     {
