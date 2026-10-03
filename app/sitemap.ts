@@ -20,7 +20,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/team`,                    priority: 0.7,  changeFrequency: "monthly", lastModified: now },
     { url: `${base}/contact`,                 priority: 0.9,  changeFrequency: "monthly", lastModified: now },
     { url: `${base}/cases`,                   priority: 0.8,  changeFrequency: "monthly", lastModified: now },
-    { url: `${base}/hill`,                    priority: 0.7,  changeFrequency: "monthly", lastModified: now },
     { url: `${base}/fighting-jays`,           priority: 0.7,  changeFrequency: "monthly", lastModified: now },
     { url: `${base}/faqs`,                    priority: 0.7,  changeFrequency: "monthly", lastModified: now },
     // Services
