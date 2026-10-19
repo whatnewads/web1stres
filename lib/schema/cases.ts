@@ -12,6 +12,17 @@ export const casesSchema = {
       "publisher": org,
     },
     {
+      "@type": "ItemList",
+      "name": "Client Case Studies",
+      "itemListOrder": "https://schema.org/ItemListOrderDescending",
+      "numberOfItems": 3,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Rocky Mountain", "url": `${base}/rocky-mountain` },
+        { "@type": "ListItem", "position": 2, "name": "Blevins", "url": `${base}/blevins` },
+        { "@type": "ListItem", "position": 3, "name": "Fighting Jays", "url": `${base}/fighting-jays` },
+      ],
+    },
+    {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": base },
