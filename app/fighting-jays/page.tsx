@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import type { CSSProperties, ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Download } from "lucide-react";
 import { BreadcrumbNav } from "@/components/shared";
+import { DataTable, Point, Strong, body, sectionHeading } from "@/components/case-study";
 import JsonLd from "@/components/json-ld";
 import { fightingJaysSchema } from "@/lib/schema/fighting-jays";
 
@@ -12,91 +12,6 @@ export const metadata: Metadata = {
   description:
     "Mortenson spent about $100,000 on 1st Response onsite care at the Fighting Jays solar project and avoided an estimated $355,500 in offsite medical visits — an estimated 256% return.",
 };
-
-const sectionHeading: CSSProperties = {
-  fontSize: "14px",
-  fontWeight: 700,
-  letterSpacing: "1px",
-  textTransform: "uppercase",
-};
-
-const body: CSSProperties = { fontSize: "16px", lineHeight: 1.7 };
-
-/* ── Tables. These are the only tables on the site, so the helper lives here
-      rather than in components/shared.tsx. ── */
-function DataTable({
-  head,
-  rows,
-  labelColumn = false,
-}: {
-  head?: string[];
-  rows: ReactNode[][];
-  labelColumn?: boolean;
-}) {
-  return (
-    <div className="overflow-x-auto">
-      <table className="w-full border-collapse text-left" style={{ fontSize: "15px" }}>
-        {head && (
-          <thead>
-            <tr>
-              {head.map((label, i) => (
-                <th
-                  key={label}
-                  scope="col"
-                  className="border-b-2 border-[#0A1628] py-3 pr-4 align-bottom text-[#0A1628]"
-                  style={{
-                    fontSize: "13px",
-                    fontWeight: 700,
-                    letterSpacing: "0.5px",
-                    textTransform: "uppercase",
-                    whiteSpace: i === 0 ? "normal" : "nowrap",
-                  }}
-                >
-                  {label}
-                </th>
-              ))}
-            </tr>
-          </thead>
-        )}
-        <tbody>
-          {rows.map((cells, r) => (
-            <tr key={r} className="border-b border-border">
-              {cells.map((cell, c) =>
-                labelColumn && c === 0 ? (
-                  <th
-                    key={c}
-                    scope="row"
-                    className="py-3 pr-6 align-top text-[#0A1628]"
-                    style={{ fontWeight: 600, lineHeight: 1.6 }}
-                  >
-                    {cell}
-                  </th>
-                ) : (
-                  <td key={c} className="py-3 pr-4 align-top text-[#5A6178]" style={{ lineHeight: 1.6 }}>
-                    {cell}
-                  </td>
-                ),
-              )}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
-/* Emphasised cell, for total and bottom-line rows. */
-function Strong({ children }: { children: ReactNode }) {
-  return <span style={{ fontWeight: 700, color: "#0A1628" }}>{children}</span>;
-}
-
-function Point({ label, children }: { label: string; children: ReactNode }) {
-  return (
-    <li className="text-[#5A6178]" style={body}>
-      <span style={{ fontWeight: 700, color: "#0A1628" }}>{label}</span> {children}
-    </li>
-  );
-}
 
 export default function FightingJaysCaseStudyPage() {
   return (

@@ -21,6 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/contact`,                 priority: 0.9,  changeFrequency: "monthly", lastModified: now },
     { url: `${base}/cases`,                   priority: 0.8,  changeFrequency: "monthly", lastModified: now },
     { url: `${base}/fighting-jays`,           priority: 0.7,  changeFrequency: "monthly", lastModified: now },
+    { url: `${base}/rocky-mountain`,          priority: 0.7,  changeFrequency: "monthly", lastModified: now },
+    { url: `${base}/blevins`,                 priority: 0.7,  changeFrequency: "monthly", lastModified: now },
     { url: `${base}/faqs`,                    priority: 0.7,  changeFrequency: "monthly", lastModified: now },
     // Services
     { url: `${base}/firstaid-bls-als`,        priority: 0.8,  changeFrequency: "monthly", lastModified: now },
