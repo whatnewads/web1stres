@@ -12,8 +12,8 @@ export const aboutUsSchema = {
       "@type": "LocalBusiness",
       "name": "1st Response Occupational Health",
       "url": "https://1stresponseoccupational.com",
-      "telephone": "+1-903-869-1201",
-      "email": "jeremy.layton@1stresponseoccupational.com",
+      "telephone": "+1-903-517-1148",
+      "email": "mmartinez@1stresponseoccupational.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tyler",

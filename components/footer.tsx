@@ -121,22 +121,22 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+19038691201"
+                  href="tel:+19035171148"
                   className="flex items-center gap-2 text-gray-400 hover:text-[#E8621A] transition-colors"
                   style={{ fontSize: "14px" }}
                 >
                   <Phone className="w-4 h-4 shrink-0 text-[#E8621A]" />
-                  (903) 869-1201
+                  (903) 517-1148
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:jeremy.layton@1stresponseoccupational.com"
+                  href="mailto:mmartinez@1stresponseoccupational.com"
                   className="flex items-center gap-2 text-gray-400 hover:text-[#E8621A] transition-colors"
                   style={{ fontSize: "14px" }}
                 >
                   <Mail className="w-4 h-4 shrink-0 text-[#E8621A]" />
-                  jeremy.layton@1stresponseoccupational.com
+                  mmartinez@1stresponseoccupational.com
                 </a>
               </li>
               <li className="flex flex-col gap-1 text-gray-400" style={{ fontSize: "14px" }}>

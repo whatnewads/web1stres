@@ -198,7 +198,7 @@ export default function Error({ reset }: { reset: () => void }) {
         <h1 className="text-[#0A1628] mb-4" style={{ fontSize: "28px", fontWeight: 700 }}>Something Went Wrong</h1>
         <p className="text-[#5A6178] mb-4" style={{ fontSize: "16px", lineHeight: 1.6 }}>We're experiencing a temporary issue. Please try again in a moment.</p>
         <p className="text-[#0A1628] mb-8" style={{ fontSize: "18px", fontWeight: 700 }}>
-          Need help now? Call <a href="tel:+19038691201" className="text-[#E8621A] underline">(903) 869-1201</a>
+          Need help now? Call <a href="tel:+19035171148" className="text-[#E8621A] underline">(903) 517-1148</a>
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button onClick={reset} className="inline-flex items-center px-6 py-3 bg-[#E8621A] text-white rounded-lg" style={{ fontSize: "15px", fontWeight: 600 }}>Try Again</button>

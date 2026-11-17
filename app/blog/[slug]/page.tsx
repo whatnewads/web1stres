@@ -150,8 +150,8 @@ export default async function BlogPostPage({
         <div className="max-w-3xl prose prose-lg" style={{ color: "#5A6178" }}>
           <p style={{ fontSize: "16px", lineHeight: 1.8 }}>
             This article is coming soon. In the meantime, contact our team at{" "}
-            <a href="tel:+19038691201" className="text-[#E8621A]">
-              (903) 869-1201
+            <a href="tel:+19035171148" className="text-[#E8621A]">
+              (903) 517-1148
             </a>{" "}
             or{" "}
             <Link href="/contact" className="text-[#E8621A]">

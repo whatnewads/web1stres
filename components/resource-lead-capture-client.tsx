@@ -191,7 +191,7 @@ export function ResourceLeadCaptureClient({
 
                 {status === "error" && (
                   <p className="text-red-600" style={{ fontSize: "14px" }}>
-                    Something went wrong. Please try again or call (903) 869-1201.
+                    Something went wrong. Please try again or call (903) 517-1148.
                   </p>
                 )}
 

@@ -12,8 +12,8 @@ const sections = [
   { title: "How We Use Your Information", content: "We use the information we collect to respond to your inquiries, provide our services, send you requested resources, and communicate with you about our services. We do not sell your personal information to third parties." },
   { title: "Data Security", content: "We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction." },
   { title: "Cookies", content: "This website does not use cookies." },
-  { title: "Your Rights", content: "You have the right to access, correct, or delete your personal information. To exercise these rights, please contact us at jeremy.layton@1stresponseoccupational.com." },
-  { title: "Contact Us", content: "If you have questions about this Privacy Policy, please contact us at jeremy.layton@1stresponseoccupational.com or call (903) 869-1201." },
+  { title: "Your Rights", content: "You have the right to access, correct, or delete your personal information. To exercise these rights, please contact us at mmartinez@1stresponseoccupational.com." },
+  { title: "Contact Us", content: "If you have questions about this Privacy Policy, please contact us at mmartinez@1stresponseoccupational.com or call (903) 517-1148." },
 ];
 
 export default function PrivacyPolicyPage() {

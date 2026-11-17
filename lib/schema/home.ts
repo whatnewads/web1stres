@@ -12,8 +12,8 @@ export const homeSchema = {
       "priceRange": "$$",
       "currenciesAccepted": "USD",
       "paymentAccepted": "Cash, Credit Card, Insurance",
-      "telephone": "+1-903-869-1201",
-      "email": "jeremy.layton@1stresponseoccupational.com",
+      "telephone": "+1-903-517-1148",
+      "email": "mmartinez@1stresponseoccupational.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Lubbock",

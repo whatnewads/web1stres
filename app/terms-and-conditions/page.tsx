@@ -13,7 +13,7 @@ const sections = [
   { title: "Intellectual Property", content: "All content on this website, including text, graphics, logos, and images, is the property of 1st Response Occupational Health and is protected by applicable intellectual property laws." },
   { title: "Limitation of Liability", content: "1st Response Occupational Health shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of this website." },
   { title: "Governing Law", content: "These terms shall be governed by and construed in accordance with the laws of the State of Texas, without regard to its conflict of law provisions." },
-  { title: "Contact", content: "Questions about these Terms should be directed to jeremy.layton@1stresponseoccupational.com." },
+  { title: "Contact", content: "Questions about these Terms should be directed to mmartinez@1stresponseoccupational.com." },
 ];
 
 export default function TermsPage() {

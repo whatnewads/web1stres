@@ -229,11 +229,11 @@ export function ScheduleConsultForm() {
               </li>
               <li className="flex items-center gap-3" style={{ fontSize: "14px" }}>
                 <Phone className="w-5 h-5 text-[#E8621A] shrink-0" />
-                <a href="tel:+19038691201" className="text-[#5A6178] hover:text-[#E8621A]">(903) 869-1201</a>
+                <a href="tel:+19035171148" className="text-[#5A6178] hover:text-[#E8621A]">(903) 517-1148</a>
               </li>
               <li className="flex items-center gap-3" style={{ fontSize: "14px" }}>
                 <Mail className="w-5 h-5 text-[#E8621A] shrink-0" />
-                <a href="mailto:jeremy.layton@1stresponseoccupational.com" className="text-[#5A6178] hover:text-[#E8621A]">jeremy.layton@1stresponseoccupational.com</a>
+                <a href="mailto:mmartinez@1stresponseoccupational.com" className="text-[#5A6178] hover:text-[#E8621A]">mmartinez@1stresponseoccupational.com</a>
               </li>
               <li className="flex items-start gap-3" style={{ fontSize: "14px" }}>
                 <Clock className="w-5 h-5 text-[#E8621A] shrink-0 mt-0.5" />
