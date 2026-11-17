@@ -68,12 +68,12 @@ export function StickyServiceSidebar({
         </Link>
         <div className="mt-4 pt-4 border-t border-white/10">
           <a
-            href="tel:+19038691201"
+            href="tel:+19035171148"
             className="flex items-center justify-center gap-2 text-gray-400 hover:text-white transition-colors"
             style={{ fontSize: "14px" }}
           >
             <Shield className="w-4 h-4" />
-            (903) 869-1201
+            (903) 517-1148
           </a>
         </div>
       </div>

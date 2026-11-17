@@ -81,8 +81,8 @@ export function ContactPageClient() {
                 </div>
                 <div>
                   <p className="text-[#5A6178]" style={{ fontSize: "13px" }}>Email:</p>
-                  <a href="mailto:jeremy.layton@1stresponseoccupational.com" className="text-[#0A1628] hover:text-[#E8621A]">
-                    jeremy.layton@1stresponseoccupational.com
+                  <a href="mailto:mmartinez@1stresponseoccupational.com" className="text-[#0A1628] hover:text-[#E8621A]">
+                    mmartinez@1stresponseoccupational.com
                   </a>
                 </div>
               </li>
@@ -92,7 +92,7 @@ export function ContactPageClient() {
                 </div>
                 <div>
                   <p className="text-[#5A6178]" style={{ fontSize: "13px" }}>Phone:</p>
-                  <a href="tel:+19038691201" className="text-[#0A1628] hover:text-[#E8621A]">(903) 869-1201</a>
+                  <a href="tel:+19035171148" className="text-[#0A1628] hover:text-[#E8621A]">(903) 517-1148</a>
                 </div>
               </li>
               <li className="flex items-center gap-3" style={{ fontSize: "15px" }}>
@@ -206,7 +206,7 @@ export function ContactPageClient() {
 
                 {status === "error" && (
                   <p className="text-red-600" style={{ fontSize: "14px" }}>
-                    Something went wrong. Please try again or call us at (903) 869-1201.
+                    Something went wrong. Please try again or call us at (903) 517-1148.
                   </p>
                 )}
 

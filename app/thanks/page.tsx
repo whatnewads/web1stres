@@ -38,11 +38,11 @@ export default function ThanksPage() {
           >
             Need immediate assistance? Call us at{" "}
             <a
-              href="tel:+19038691201"
+              href="tel:+19035171148"
               className="text-[#E8621A] hover:underline"
               style={{ fontWeight: 600 }}
             >
-              (903) 869-1201
+              (903) 517-1148
             </a>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -19,7 +19,6 @@ export const teamSchema = {
       "@type": "Person",
       "name": "Jeremy Layton",
       "jobTitle": "Co-Founder",
-      "email": "jeremy.layton@1stresponseoccupational.com",
       "worksFor": { "@id": "https://1stresponseoccupational.com/#organization" },
       "image": "https://1stresponseoccupational.com/team/jeremy-layton.jpg"
     },

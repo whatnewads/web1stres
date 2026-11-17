@@ -137,12 +137,12 @@ export function NavBar() {
           {/* Desktop CTA + Phone */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="tel:+19038691201"
+              href="tel:+19035171148"
               className="flex items-center gap-1.5 text-[#0A1628] hover:text-[#E8621A] transition-colors"
               style={{ fontSize: "14px", fontWeight: 500 }}
             >
               <Phone className="w-4 h-4" />
-              (903) 869-1201
+              (903) 517-1148
             </a>
             <Link
               href="/schedule-consult"
